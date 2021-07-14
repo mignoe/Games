@@ -1,0 +1,67 @@
+
+body{background-color: black; background-image: url(https://steamuserimages-a.akamaihd.net/ugc/282974192944093761/5D0A412260D12E1A7A14699E839206990C4FCB94/?imw=1024&imh=624&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true);
+ background-repeat: no-repeat; background-size: 100%;}
+h1{ position: relative; transform: rotateY(180deg); top: 190px; font-size: 25px;;}
+
+
+
+
+.card{ position: absolute;
+    top: 20px;
+   right: 1150px;
+    width: 200px;
+    height: 276px;
+}
+.Back{        
+    background-image: url(../Images/Card_back-Ragnaros.png);
+    width: 200px;
+    height: 276px;
+}
+.cardClicker{
+    position: absolute;
+    top: 20px;
+   right: 1150px;
+    width: 200px;
+    height: 276px;
+}
+
+
+
+.card1{right: 30px; top: 360px;}
+.card2{right: 240px; top: 360px;}
+.card3{right: 450px; top: 360px;}
+.card4{right: 660px; top: 360px;}
+.card5{right: 870px; top: 360px;}
+
+.buttomContainer{
+    position: absolute;
+    top: 420px;
+   right: 1150px;
+    background-color: aqua;
+    
+    width: 200px;
+    height: 226px;
+}
+
+.blank{
+    position: relative;
+    top: 6px ;
+    background-color: rgba(255, 0, 0, 1);
+    width: 180px;
+    height: 266px;
+    border-radius: 5%;
+    content: unset;
+    text-align: center;
+}
+.flipped{
+    transform: rotateY(180deg);
+}
+.discarted{
+    transition: 0.5s;
+    right: -1000px;
+}
+
+
+
+
+

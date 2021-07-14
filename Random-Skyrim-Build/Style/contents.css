@@ -1,0 +1,31 @@
+.Alteration {background-image: url(../Images/SR-skill-Alteration_bw.png); background-repeat: no-repeat; background-size: 100%; background-position-y: 20px;  background-color: blue;}
+.Conjuration {background-image: url(../Images/SR-skill-Conjuration_bw.png); background-repeat: no-repeat; background-size: 100%; background-position-y: 20px;background-color: blue;} 
+.Destruction {background-image: url(../Images/SR-skill-Destruction_bw.png); background-repeat: no-repeat; background-size: 100%; background-position-y: 20px;background-color: blue;}
+.Enchanting {background-image: url(../Images/SR-skill-Enchanting_bw.png); background-repeat: no-repeat; background-size: 100%; background-position-y: 20px;background-color: blue;}
+.Illusion {background-image: url(../Images/SR-skill-Illusion_bw.png); background-repeat: no-repeat; background-size: 100%; background-position-y: 20px;background-color: blue;}
+.Restoration {background-image: url(../Images/SR-skill-Restoration_bw.png); background-repeat: no-repeat; background-size: 100%; background-position-y: 20px;background-color: blue;}
+ 
+.Alchemy { background-image: url(../Images/SR-skill-Alchemy_bw.png); background-repeat: no-repeat; background-size: 100%; background-position-y: 20px;  background-color: green;}
+.Pickpocket {background-image: url(../Images/SR-skill-Pickpocket_bw.png); background-repeat: no-repeat; background-size: 100%; background-position-y: 20px;background-color: green;}
+.Sneak {background-image: url(../Images/SR-skill-Sneak_bw.png); background-repeat: no-repeat; background-size: 100%; background-position-y: 20px;background-color: green;}
+.Speechcraft {background-image: url(../Images/SR-skill-Speech_bw.png); background-repeat: no-repeat; background-size: 100%; background-position-y: 20px;background-color: green;}
+.Lockpicking {background-image: url(../Images/SR-skill-Lockpicking_bw.png); background-repeat: no-repeat; background-size: 100%; background-position-y: 20px;background-color: green;}
+.Archer {background-image: url(../Images/SR-skill-Archery_bw.png); background-repeat: no-repeat; background-size: 100%; background-position-y: 20px;background-color: green;}
+
+
+
+
+.Block {background-image: url(../Images/SR-skill-Block_bw.png); background-repeat: no-repeat; background-size: 100%; background-position-y: 20px;}
+.Heavy_Armor {background-image: url(../Images/SR-skill-Heavy_Armor_bw.png); background-repeat: no-repeat; background-size: 100%; background-position-y: 20px;}
+.Light_Armor {background-image: url(../Images/SR-skill-Light_Armor_bw.png); background-repeat: no-repeat; background-size: 100%; background-position-y: 20px;}
+.One_handed {background-image: url(../Images/SR-skill-One-handed_bw.png); background-repeat: no-repeat; background-size: 100%; background-position-y: 20px;}
+.Smithing {background-image: url(../Images/SR-skill-Smithing_bw.png); background-repeat: no-repeat; background-size: 100%; background-position-y: 20px;}
+.Two_handed {background-image: url(../Images/SR-skill-Two-handed_bw.png); background-repeat: no-repeat; background-size: 100%; background-position-y: 20px;} 
+
+
+
+.font{
+    
+    color: white;
+    z-index: 100;
+}

@@ -1,0 +1,38 @@
+.pos1{animation-name: one; animation-duration: 1s; animation-fill-mode: forwards;}
+.pos2{animation-name: two; animation-duration: 1s; animation-fill-mode: forwards;}
+.pos3{animation-name: three; animation-duration: 1s; animation-fill-mode: forwards;}
+.pos4{animation-name: four; animation-duration: 1s; animation-fill-mode: forwards;}
+.pos5{animation-name: five; animation-duration: 1s; animation-fill-mode: forwards;}
+
+.flip{animation-name: flip; animation-duration: 1s; animation-fill-mode: forwards;}
+@keyframes one {
+    0%{}
+    100%{ right: 30px; top: 360px;}
+    
+}
+@keyframes two {
+    0%{}
+    100%{ right: 240px; top: 360px;}
+    
+}
+@keyframes three {
+    0%{}
+    100%{ right: 450px; top: 360px;}
+    
+}
+@keyframes four {
+    0%{}
+    100%{ right: 660px; top: 360px;}
+    
+}
+@keyframes five {
+    0%{}
+    100%{ right: 870px; top: 360px;}
+    
+}
+@keyframes flip {
+    0% {}
+    50% {transform: rotateY(90deg);}
+    100% {transform: rotateY(180deg);}
+    
+}
