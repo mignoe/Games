@@ -7,27 +7,27 @@
 .flip{animation-name: flip; animation-duration: 1s; animation-fill-mode: forwards;}
 @keyframes one {
     0%{}
-    100%{ right: 30px; top: 360px;}
+    100%{ right: 30px; top: 380px;}
     
 }
 @keyframes two {
     0%{}
-    100%{ right: 240px; top: 360px;}
+    100%{ right: 240px; top: 380px;}
     
 }
 @keyframes three {
     0%{}
-    100%{ right: 450px; top: 360px;}
+    100%{ right: 450px; top: 380px;}
     
 }
 @keyframes four {
     0%{}
-    100%{ right: 660px; top: 360px;}
+    100%{ right: 660px; top: 380px;}
     
 }
 @keyframes five {
     0%{}
-    100%{ right: 870px; top: 360px;}
+    100%{ right: 870px; top: 380px;}
     
 }
 @keyframes flip {

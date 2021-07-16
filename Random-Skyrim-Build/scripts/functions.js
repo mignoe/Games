@@ -55,6 +55,7 @@ content5.classList = "blank font "+ skills[numbers[4]];  text5.innerHTML = skill
     }}
 
 function discart(){
+    if (state == "flipped"){
     card1.classList = "card card1 flipped discarted";
     card2.classList = "card card2 flipped discarted";
     card3.classList = "card card3 flipped discarted";
@@ -74,7 +75,8 @@ function discart(){
         randomize();
         state= "nothing";
       }
-    , 500);
+    , 500);}
+    else{}
 }
 
 

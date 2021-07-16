@@ -1,9 +1,5 @@
-import {position, position2} from './mapRenderer.js'
-var trail1 = [];
-var trail2 = [];
 
-
-
+console.log ("3");
 //player 1 functions
 function move(n){
 
@@ -96,8 +92,7 @@ function check2(){
     
     
     
-//generates first apple
-generate();
+
     
 // game over and reset.
 function endGame(param){
@@ -127,3 +122,5 @@ function reset(){
     document.getElementById("P2").innerHTML = P2;}
 else{}
 }      
+console.log ("3");
+

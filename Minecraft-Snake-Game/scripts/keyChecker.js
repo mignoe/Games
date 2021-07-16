@@ -7,7 +7,7 @@ function checkKey(e) {
    
     
     i1=1; 
-    up=1;
+    up== true;
     down=0;
     left=0;
     right=0;startP1();
@@ -148,3 +148,4 @@ function checkKey(e) {
   }
 
 }
+console.log ("4");

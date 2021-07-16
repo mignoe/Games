@@ -1,9 +1,4 @@
-var zone = []; 
-var start = Math.floor(Math.random() * 1024);
-var start2 = Math.floor(Math.random() * 1024);
-var zoneZ = [];
-var position = start;
-var position2 = start2;
+console.log ("2");
 //renderer and start point (it is the only thing that needs react on the whole code).
 for (let i = 1; i <= 1024; i++ ){
       
@@ -19,5 +14,6 @@ ReactDOM.render(zone, document.getElementById("game"));
 for (let i = 1; i <= 1024; i++ ){ 
 document.getElementById("0").id = i;
 }
+//generates first apple
+generate();
 
-export {position, position2};

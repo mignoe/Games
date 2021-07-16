@@ -1,6 +1,12 @@
-
-body{background-color: black; background-image: url(https://steamuserimages-a.akamaihd.net/ugc/282974192944093761/5D0A412260D12E1A7A14699E839206990C4FCB94/?imw=1024&imh=624&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true);
- background-repeat: no-repeat; background-size: 100%;}
+*{
+    margin: 0;
+    padding:0;
+}
+body{background-color: black; 
+    background-image: url(https://steamuserimages-a.akamaihd.net/ugc/282974192944093761/5D0A412260D12E1A7A14699E839206990C4FCB94/?imw=1024&imh=624&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true);
+ background-repeat: no-repeat; 
+ background-size: 100%;
+ width: 100em;}
 h1{ position: relative; transform: rotateY(180deg); top: 190px; font-size: 25px;;}
 
 
@@ -27,17 +33,19 @@ h1{ position: relative; transform: rotateY(180deg); top: 190px; font-size: 25px;
 
 
 
-.card1{right: 30px; top: 360px;}
-.card2{right: 240px; top: 360px;}
-.card3{right: 450px; top: 360px;}
-.card4{right: 660px; top: 360px;}
-.card5{right: 870px; top: 360px;}
+.card1{right: 30px; top: 380px;}
+.card2{right: 240px; top: 380px;}
+.card3{right: 450px; top: 380px;}
+.card4{right: 660px; top: 380px;}
+.card5{right: 870px; top: 380px;}
 
 .buttomContainer{
     position: absolute;
     top: 420px;
    right: 1150px;
     background-color: aqua;
+    background-image: url(../Images/Dark-brotherhood-card.png);
+    background-size: 95%;
     
     width: 200px;
     height: 226px;
@@ -58,7 +66,7 @@ h1{ position: relative; transform: rotateY(180deg); top: 190px; font-size: 25px;
 }
 .discarted{
     transition: 0.5s;
-    right: -1000px;
+    right: 0px;
 }
 
 
