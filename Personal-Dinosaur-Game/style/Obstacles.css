@@ -1,0 +1,25 @@
+.obstacles{
+    position: absolute;
+    right:0%;
+    bottom: 0%;
+
+    background-color: aqua;
+    height: 20%;
+}
+
+.V0 {
+    height: 5%;
+    width: 5%;
+}
+.V1 {
+    height: 2%;
+    width: 8%;
+}
+.V2 {
+    height: 7%;
+    width: 1%;
+}
+.V3 {
+    height: 3%;
+    width: 5%;
+}

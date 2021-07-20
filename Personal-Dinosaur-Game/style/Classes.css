@@ -1,0 +1,49 @@
+.container{ 
+    position: absolute;
+    left: 15%;
+    top: 10%;
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSE3IfCMpuzNNrZ8Q009DlQg_R3i5uCym7_kxnu-b7BCSVsFHV14YQ6uB9yC-z0PFfAPQw&usqp=CAU);
+    width:60%;
+    height: 40%;
+    border: 2px;
+    border-style: solid;   
+    
+}
+/* this class is to hide the obstacles*/
+.hider{
+    position:absolute;
+    left: 0%;
+    top:10%;
+
+    background-color: white;
+    width:15%;
+    height: 42%;
+
+    z-index: 2;
+}
+/* this class is to hide the obstacles*/
+.hider2{
+    position:absolute;
+    left: calc(75% + 2px);
+    top:10%;
+
+    background-color: white;
+    width:25%;
+    height: 42%;
+
+    z-index: 2;
+}
+.player{ 
+    position: absolute;
+   left:5%;
+   bottom: 0%;
+   background-image: url(../Sources/Dino\ in\ a\ tank.png);
+   background-size: 100%;
+   background-repeat: no-repeat;
+   background-position-y:112% ;
+    background-color:white;
+    width: 10%;
+    height: 26%;
+
+    
+}

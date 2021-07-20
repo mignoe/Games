@@ -43,10 +43,10 @@ h1{ position: relative; transform: rotateY(180deg); top: 190px; font-size: 25px;
     position: absolute;
     top: 420px;
    right: 1150px;
-    background-color: aqua;
-    background-image: url(../Images/Dark-brotherhood-card.png);
-    background-size: 95%;
     
+    background-image: url(../Images/Button_box.jpg);
+    background-size: 95%;
+    background-repeat: no-repeat;
     width: 200px;
     height: 226px;
 }
