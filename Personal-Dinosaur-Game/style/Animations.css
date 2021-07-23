@@ -27,3 +27,11 @@
     100%{left: -20%;}
     
 }
+
+
+/*animation for the player's movement*/
+@keyframes movement {
+    
+    100%{background-image: url(../Sources/Dino\ in\ a\ tank\ 2.png);}
+    
+}
