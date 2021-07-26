@@ -23,3 +23,11 @@
     height: 3%;
     width: 5%;
 }
+
+.Wall{
+    height: 30%;
+    width: 2%;
+    background-image: url(../Sources/Brick\ texture.jpg);
+}
+
+

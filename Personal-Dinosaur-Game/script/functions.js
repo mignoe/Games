@@ -1,6 +1,6 @@
 var player = document.getElementById("player");console.log("ok");
 var container = document.getElementById("container");
-var obstacles = [<div class="obstacles V0  Aproximate"></div>,<div class="obstacles V1 Aproximate"></div>,<div class="obstacles V2 Aproximate"></div>,<div class="obstacles V3 Aproximate"></div>]
+var obstacles = ['V0','V1','V2','V3','Wall']
 var jumpState = "off";
 var animSpeed = 2000;
 var generationSpeed = 1000;
@@ -12,6 +12,8 @@ var interval2;
 var interval3;
 var interval4;
 var interval5;
+
+var intervalShotChecker;
 
 function jump(param) {
     if(jumpState == "off"){
@@ -37,16 +39,42 @@ function checkKey(e) {
     e = e || window.event;
    
     if (e.keyCode == '38'){jump(); start(); }
+    if (e.keyCode == '70'){shoot(); start(); }
     
+}
+//functions that will shoot the cannon.
+function shoot(){
+    if(jumpState == 'on'){}
+    else{
+    var Shot = document.createElement("div");
+    Shot.classList = "roundShot"
+    Shot.id = "roundShot";
+    container.appendChild(Shot);
+    setTimeout( () => {Shot.remove()}, 2000)}
+    intervalShotChecker = setInterval(() => {checkShot()}, 10);
+    setTimeout( () => {clearInterval(intervalShotChecker)}, 2000)
+}
+//function that will see if the shot hit the wall.
+function checkShot(){
+    var wall = document.getElementById("Wall");
+    var shot = document.getElementById("roundShot");
+    var shotRight = parseFloat(window.getComputedStyle(shot).getPropertyValue("right"));
+    var wallRight = parseFloat(window.getComputedStyle(wall).getPropertyValue("right"));console.log("wall");
+    var wallWidth = parseFloat(window.getComputedStyle(wall).getPropertyValue("width"));
+    if ( shotRight >= wallRight - wallWidth )
+    {console.log('everything is fine'); wall.remove()}
+    console.log("working");
 }
 //function to generate the obstacles.
 function generate(){
-    var random = Math.floor(Math.random()* 4);
-    var New = document.createElement("Obstacle");
+    var random = Math.floor(Math.random()* 5);
+    var New = document.createElement("div");
    
-    New.classList = "obstacles V"+[random];
-    New.id = "obstacle";
-    
+    New.classList = "obstacles "+ obstacles[random];
+    if  (random == 5){New.id = "Wall"}
+    else{
+        New.id = "obstacle";
+    }
     container.appendChild(New);
     animate();
   

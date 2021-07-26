@@ -35,3 +35,9 @@
     100%{background-image: url(../Sources/Dino\ in\ a\ tank\ 2.png);}
     
 }
+/* animation for the round shot's movement */
+@keyframes to_right {
+    0%{ right: 83%;}
+    100%{ right:  -20%;}
+    
+}

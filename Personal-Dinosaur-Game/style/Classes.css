@@ -55,3 +55,23 @@
     background-position: 50%;
     
 }
+/* roundShot */
+.roundShot {
+    background-image: url(../Sources/RoundShot.png);
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position-x: right;
+    /*background-color: rgb(219, 27, 27);
+    */position: absolute;
+    height: 8%;
+    width: 4%;
+    top: 85%;
+    
+    
+    animation-name: to_right;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0, 0, 1, 1);
+
+
+}
