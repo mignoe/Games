@@ -13,7 +13,7 @@ var interval3;
 var interval4;
 var interval5;
 
-var intervalShotChecker;
+
 
 function jump(param) {
     if(jumpState == "off"){
@@ -38,12 +38,13 @@ document.onkeydown = checkKey;
 function checkKey(e) {
     e = e || window.event;
    
-    if (e.keyCode == '38'){jump(); start(); }
+    if (e.keyCode == '38' || e.keyCode == '87'){jump(); start(); }
     if (e.keyCode == '70'){shoot(); start(); }
     
 }
 //functions that will shoot the cannon.
 function shoot(){
+    var intervalShotChecker;
     if(jumpState == 'on'){}
     else{
     var Shot = document.createElement("div");
@@ -54,16 +55,23 @@ function shoot(){
     intervalShotChecker = setInterval(() => {checkShot()}, 10);
     setTimeout( () => {clearInterval(intervalShotChecker)}, 2000)
 }
+function startShotChecker() {
+    
+}
 //function that will see if the shot hit the wall.
 function checkShot(){
-    var wall = document.getElementById("Wall");
+    var obstacle = document.getElementById("animated");
     var shot = document.getElementById("roundShot");
-    var shotRight = parseFloat(window.getComputedStyle(shot).getPropertyValue("right"));
-    var wallRight = parseFloat(window.getComputedStyle(wall).getPropertyValue("right"));console.log("wall");
-    var wallWidth = parseFloat(window.getComputedStyle(wall).getPropertyValue("width"));
-    if ( shotRight >= wallRight - wallWidth )
-    {console.log('everything is fine'); wall.remove()}
-    console.log("working");
+    if (obstacle == null){return 'null';}
+    var shotLeft = parseFloat(window.getComputedStyle(shot).getPropertyValue("left"));
+    var shotWidth = parseFloat(window.getComputedStyle(shot).getPropertyValue("width"));
+    var shotTop = parseFloat(window.getComputedStyle(shot).getPropertyValue("top"));
+    var shotHeight = parseFloat(window.getComputedStyle(shot).getPropertyValue("height"));
+    var obstacleLeft = parseFloat(window.getComputedStyle(obstacle).getPropertyValue("left"));
+    var obstacleTop = parseFloat(window.getComputedStyle(obstacle).getPropertyValue("top"));
+    if ( shotLeft + shotWidth >= obstacleLeft && obstacleTop <=  shotTop - shotHeight )
+    {obstacle.remove(); shot.remove()}
+    
 }
 //function to generate the obstacles.
 function generate(){
@@ -71,10 +79,8 @@ function generate(){
     var New = document.createElement("div");
    
     New.classList = "obstacles "+ obstacles[random];
-    if  (random == 5){New.id = "Wall"}
-    else{
-        New.id = "obstacle";
-    }
+    New.id = "obstacle";
+    
     container.appendChild(New);
     animate();
   
@@ -83,8 +89,10 @@ function generate(){
 //function that will animate the "obstacle" elements.
 function animate(){
     var obstacle = document.getElementById("obstacle");
+    
     obstacle.animate(
         [{left: '100%'},{left: '-50%'}], {duration: animSpeed, fill: "forwards"} );   
+      
     obstacle.id="animated";  
     //delay to delete the "obstacle" after reached the end of the animation.
     setTimeout(()=>{obstacle.remove()}, animSpeed + 100)
@@ -100,6 +108,7 @@ var playerHeight=parseFloat(window.getComputedStyle(player).getPropertyValue("he
 function checkDead(){
     var obstacle = document.getElementById("animated");
     var obstacleWidth = parseFloat(window.getComputedStyle(obstacle).getPropertyValue("width"));
+    if (obstacle == null){return 'null';}
     var playerTop = parseFloat(window.getComputedStyle(player).getPropertyValue("top"));
     var obstacleLeft = parseFloat(window.getComputedStyle(obstacle).getPropertyValue("left"));
     var obstacleTop = parseFloat(window.getComputedStyle(obstacle).getPropertyValue("top"));
@@ -141,6 +150,7 @@ function removeAnimation(){
 }
 
 function reset(){
+    if (startState =='on'){return 'start is on'}
     points = 0;
     generationSpeed = 2000;
     animSpeed = 2000;
