@@ -1,35 +1,37 @@
 .container{ 
     position: absolute;
-    left: 15%;
-    top: 10%;
+    display: block;
+    
     /*background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSE3IfCMpuzNNrZ8Q009DlQg_R3i5uCym7_kxnu-b7BCSVsFHV14YQ6uB9yC-z0PFfAPQw&usqp=CAU);
-    */width:60%;
-    height: 40%;
+    */width:1000px;
+    height: 300px;
     border: 2px;
     border-style: solid;   
+    
     
 }
 /* this class is to hide the obstacles*/
 .hider{
-    position:absolute;
-    left: 0%;
-    top:10%;
+    position: inherit;
+    
+    left: -202px;
+
 
     background-color: white;
-    width:15%;
-    height: 42%;
+    width:200px;
+    height: 300px;
 
     z-index: 2;
 }
 /* this class is to hide the obstacles*/
 .hider2{
-    position:absolute;
-    left: calc(75% + 2px);
-    top:10%;
+    position:inherit;
+    right: -202px;
+    
 
     background-color: white;
-    width:25%;
-    height: 42%;
+    width: 200px;
+    height: 300px;
 
     z-index: 2;
 }
