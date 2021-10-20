@@ -1,0 +1,20 @@
+
+.container{
+    position: relative;
+    padding: 10px 180px 10px 180px;
+
+}
+.container:nth-of-type(even){
+    background-color: #b5e7a0;
+}
+
+
+.container:nth-of-type(odd){
+    background-color: #e3eaa7;
+    flex-direction: row;
+}
+
+
+.gamesImages{
+    width: 350px;
+}
