@@ -1,27 +1,21 @@
 
 .container:not(h3){
-
     position: relative;
     text-align: center;
-    width: 80%;
+    width: 100%;
     height: auto;
-    padding: 2% 10% 2% 10%;
-
+    padding: 1vw 0;  
 }
 .container h3{
     text-align: center;
-    margin-bottom: 1%;
-    
+    margin-bottom: 1%;   
 }
 .container:nth-of-type(even){
     background-color: #b5e7a0;
 }
 .container:nth-of-type(odd){
     background-color: #e3eaa7;
-    flex-direction: row;
 }
-
-
 
 .game{
     position: relative;
@@ -32,6 +26,7 @@
 }
 .container:nth-of-type(odd) .game{
     right: 10%;
+    
 }
 
 .container:nth-of-type(even) .game{ 
@@ -43,9 +38,6 @@
 
 .container:nth-of-type(even) .game h4{ 
     float: left;
+    
 }
 
-
-.gamesImages{
-    width: 350px;
-}
