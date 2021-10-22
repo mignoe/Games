@@ -1,48 +1,37 @@
 .container{ 
     position: absolute;
     display: block;
-    
-    /*background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSE3IfCMpuzNNrZ8Q009DlQg_R3i5uCym7_kxnu-b7BCSVsFHV14YQ6uB9yC-z0PFfAPQw&usqp=CAU);
-    */width:1000px;
+    width:1000px;
     height: 300px;
     border: 2px;
-    border-style: solid;   
-    
-    
+    border-style: solid;  
 }
 /* this class is to hide the obstacles*/
 .hider{
     position: inherit;
-    
     left: -202px;
-
-
     background-color: white;
     width:200px;
     height: 300px;
-
     z-index: 2;
 }
 /* this class is to hide the obstacles*/
 .hider2{
     position:inherit;
     right: -202px;
-    
-
     background-color: white;
     width: 200px;
     height: 300px;
-
     z-index: 2;
 }
 .player{ 
     position: absolute;
-   left:5%;
-   bottom: 0%;
-   background-image: url(../Sources/Dino\ in\ a\ tank.png);
-   background-size: 100%;
-   background-repeat: no-repeat;
-   background-position-y:112% ;
+    left:5%;
+    bottom: 0%;
+    background-image: url(../Sources/Dino\ in\ a\ tank.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position-y:112% ;
     background-color:rgb(233, 19, 19);
     width: 10%;
     height: 26%;
@@ -52,10 +41,9 @@
 }
 
 .loseScreen {
-    background-image: url(../Sources/reload\ icon\ \(png\).png);
+    background-image: url(../Sources/reload\ icon\ \png\));
     background-repeat: no-repeat;
     background-position: 50%;
-    
 }
 /* roundShot */
 .roundShot {
