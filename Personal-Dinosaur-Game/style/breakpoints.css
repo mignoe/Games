@@ -1,0 +1,61 @@
+@media only screen and (orientation: portrait){
+    
+    .turnScreen{
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        padding-top: 20%;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+        background-color: bisque;
+        text-align: center;
+        font-size: 200%;
+    }
+    .turnScreen img{
+        display: inline-block;
+        position: relative;
+        text-align: center;
+        padding-top: 5%;
+        width: 30%;
+    }
+
+}
+ @media (pointer:none), (pointer:coarse){
+    
+    .buttons{
+        
+        position: absolute;
+        left: 5%;
+        top: 65%;
+        display: inline-block;
+        width: 90%;
+    }
+    .jumpButton{
+        display: inline;
+        float: right;
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+        
+    }
+    .jumpButton img{
+        position: relative;
+        width: 50%;
+    }
+    .fireButton{
+        display: inline;
+        float: left;
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+
+    }
+   .fireButton img{
+       position: relative;
+       width: 100%;
+       left: 15%;
+       top: 5%;
+   } 
+  } 

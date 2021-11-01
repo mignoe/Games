@@ -1,0 +1,22 @@
+.game{
+    position: absolute;
+    left: 10%;
+    top:5%;
+    width: 80%;
+    height: 50%;
+    border-style: solid;
+    margin: auto;
+}
+.buttons{
+    position: relative;
+}
+.jumpButton{
+    display: none;    
+}
+.fireButton{
+    display: none;
+}
+.turnScreen{
+    display: none;
+}
+    

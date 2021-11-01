@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style/main.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dinosaur game</title>
+</head>
+<body>
+    <div class="turnScreen">Turn the Screen! <br><img src="Images/turnScreenPhone.png"></div>
+    <canvas id="game" class="game" onclick="reload()"></canvas>
+    <div class="buttons">
+        <button class="fireButton" onclick="fire()"><img src="Images/shootCannonball.png" alt="Shoot"></button>
+        <button class="jumpButton" onclick="jump()"><img src="Images/jumpButton.png" alt="Jump"></button>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+    <script src="script/functionsOfGame.js"></script>
+    <script src="script/script.js"></script>
+</body>
+</html>
