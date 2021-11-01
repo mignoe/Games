@@ -1,9 +1,0 @@
-*{padding: 0px;
-  margin: 0px;}
-  
-  body{
-    display: block;
-    padding-left: calc(50% - 500px);
-    padding-top: 120px;
-    z-index: 0;
-  }
