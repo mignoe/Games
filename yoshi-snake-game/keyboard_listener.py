@@ -1,24 +1,38 @@
-import asyncio 
-from pynput import keyboard
-
-
-import functions
-
-
-async def key_listener():
-    def on_press(key):
-        if key == keyboard.Key.esc:
-            return False  # stop listener
-            k = key.name  # arrow keys direction    
-        if k in ['up', 'right', 'down', 'left']: #keys of interest
-            # self.keys.append(k)  # store it in global-like variable
-            print('Key pressed: ' + k)
+# This function depends on Pygame module.
+def key_listener():
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            pygame.quit()
+            sys.exit()
+         
+        # checking if keydown event happened or not
+        if event.type == pygame.KEYDOWN:
+               
+            # checking if key "A" was pressed
+            if event.key == pygame.K_a:
+                print("Key A has been pressed")
+               
+            # checking if key "J" was pressed
+            if event.key == pygame.K_j:
+                print("Key J has been pressed")
             
+            # checking if key "P" was pressed
+            if event.key == pygame.K_p:
+                print("Key P has been pressed")
+             
+            # checking if key "M" was pressed
+            if event.key == pygame.K_m:
+                print("Key M has been pressed")
 
-    listener = keyboard.Listener(on_press=on_press)
-    listener.start()  # start to listen on a separate thread
-    listener.join()  # remove if main thread is polling self.keys
+# For testing.
 
 if __name__ == "__main__":
+    
+    import pygame
+    import sys
 
+    pygame.init()
+    display = pygame.display.set_mode((300, 300))
+    while True:
+        key_listener()
 

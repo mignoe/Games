@@ -4,11 +4,12 @@ pygame.init()
 
 import character
 import keyboard_listener
+import cordinate_system
 from functions import *
 
 
 
-# It should be 17x15 
+# It should be 17x15. 
 SCREEN_WIDTH = 680
 SCREEN_HEIGHT = 600
 
@@ -21,9 +22,8 @@ while running:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             running = False
-
-    # Fill the background with white
-    screen.fill((255, 255, 255))
+    # Fill the background with green
+    screen.fill((31, 134, 31))
 
     # Draw a solid blue circle in the center
     pygame.draw.circle(screen, (0, 0, 255), (250, 250), 75)
