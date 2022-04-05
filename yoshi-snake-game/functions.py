@@ -1,17 +1,13 @@
-def move(character, direction):
-    if direction == "up":
-        character['y'] += 1
-    elif direction == "right":
-        character['x'] += 1
-    elif direction == "down":
-        character['y'] -= 1
-    elif direction == "left":
-        character['x'] -= 1
-    return character
 
-def create_new_dino(character, color):
-    return {'width': character.width,
-            'height': character.height,
-            'x': character.x,
-            'y': character.y,
-            'img': f"images/{color}-yoshi/"}
+# Renders all objects on the game.
+def render_all(objects):
+    for object in objects:
+        src = object.src
+        width, height = object.width, object.height        
+        x = object.x
+        y = object.y
+
+        image = pygame.image.load(src)
+        image = pygame.transform.scale(image, (width, height))
+        screen.blit(image, (x, y))
+
