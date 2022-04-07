@@ -2,12 +2,12 @@ var canvas = document.getElementById("game");
 canvas.height = 300;
 canvas.width = 1000;
 var ctx = canvas.getContext("2d");
-var activeObstacle = [];
 
+var activeObstacle = [];
 var gameState = "running";
 var gameSpeed = 2000;
-
 var points = 0;
+
 
 //factory to the objects of the game
 function gameObject(imgSource, x, y, width, height){
@@ -19,10 +19,10 @@ function gameObject(imgSource, x, y, width, height){
 
     let img = new Image();
     img.src = imgSource;
-    object.img = img;
     img.onload = function(){
         ctx.drawImage(object.img, object.x, object.y, object.width, object.height);
     } 
+    object.img = img;
     object.newImagesrc = img.src.slice(0, -4) + "Broken" + img.src.slice(-4);
     return object;
 }
@@ -32,7 +32,7 @@ function gameObject(imgSource, x, y, width, height){
 
 var player = new gameObject("Images/dino.png", 70, 240, 80, 60);
 var cannonball = new gameObject("Images/cannonball.jpg", -10, 1000, 10, 10);
-var reloadScreen = new gameObject("Images/Reload.jpg", 400, 50, 200, 200);
+const reloadScreen = new gameObject("Images/Reload.jpg", 400, 50, 200, 200);
 const obstacle = {
     1: { img: "Images/car.png",     x: 1000, y: 260, width: 50, height: 40},
     2: { img: "Images/train.png",   x: 1000, y: 270, width: 60, height: 30},
@@ -42,7 +42,7 @@ const obstacle = {
 
 //animations
 
-var animations = {
+const animations = {
     jump: function(time){
         if(player.y < 240){setTimeout(()=> ((time =! "second") ? jump("second") : "wait!"), 50); return 0}
         TweenMax.to(player, 0.35 ,{y:180, repeat: 1, yoyo:true})
