@@ -1,6 +1,7 @@
+import pygame
 
 # Renders all objects on the game.
-def render_all(objects):
+def render_all(objects, display):
     for object in objects:
         src = object.src
         width, height = object.width, object.height        
@@ -9,5 +10,72 @@ def render_all(objects):
 
         image = pygame.image.load(src)
         image = pygame.transform.scale(image, (width, height))
-        screen.blit(image, (x, y))
+        display.blit(image, (x, y))
+
+
+def one_dimensional_list(nested_list):
+
+    # Can only be used on a completly two dimensional list.
+    one_dimensional_list = []
+    for i in range(len(nested_list)):
+        for j in range(len(nested_list[i])):
+            one_dimensional_list.append(nested_list[i][j])
+
+    return one_dimensional_list
+
+
+def update_frames(objects):
+    for object in objects:
+        object.update_frame()
+
+# Verifiers of end_game:
+def end_game(running):
+    running = False
+    print("end game")
+
+
+def verify_collision_screen(player, screen_width, screen_height):
+    if  0 > player.x > screen_width - player.width:
+        end_game(running)
+        
+    if 0 > player.y or player.y > screen_height - player.height:
+        end_game(running)
+
+
+if __name__ == "__main__":
+    import time
+    from yoshi import Yoshi
+
+    SCREEN_WIDTH = 680
+    SCREEN_HEIGHT = 600
+    screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
+
+    yoshis = []
+    yoshi1 = Yoshi()
+    yoshis.append(yoshi1)
+    yoshi2 = Yoshi(x = 40, y = 40)
+    yoshis.append(yoshi2)
+    yoshi3 = Yoshi(x = 70, y = 40)
+    yoshis.append(yoshi3)
+
+    running = True
+    while running:
+    
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                running = False
+
+        
+        screen.fill((31, 134, 31))
+
+        render_all(yoshis)
+
+        
+
+        pygame.display.flip()
+        
+        time.sleep(0.5)
+
+    pygame.quit()
+
 
