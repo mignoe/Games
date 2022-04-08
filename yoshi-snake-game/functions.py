@@ -28,18 +28,7 @@ def update_frames(objects):
     for object in objects:
         object.update_frame()
 
-# Verifiers of end_game:
-def end_game(running):
-    running = False
-    print("end game")
 
-
-def verify_collision_screen(player, screen_width, screen_height):
-    if  0 > player.x > screen_width - player.width:
-        end_game(running)
-        
-    if 0 > player.y or player.y > screen_height - player.height:
-        end_game(running)
 
 
 if __name__ == "__main__":
