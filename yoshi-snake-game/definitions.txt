@@ -1,2 +1,0 @@
-Rendering: is a functions that renders everything based on the parameters or
-is a class method that render the object itself

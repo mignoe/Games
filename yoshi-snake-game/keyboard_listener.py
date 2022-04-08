@@ -2,9 +2,6 @@ import pygame
 
 def key_listener():
     for event in pygame.event.get():
-        if event.type == pygame.QUIT:
-            pygame.quit()
-            sys.exit()
          
         # checking if keydown event happened or not
         if event.type == pygame.KEYDOWN:
@@ -25,15 +22,4 @@ def key_listener():
             if event.key == pygame.K_LEFT:
                 return "left"
 
-# For testing.
-
-if __name__ == "__main__":
-    
-    import pygame
-    import sys
-
-    pygame.init()
-    display = pygame.display.set_mode((300, 300))
-    while True:
-        key_listener()
 

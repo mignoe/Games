@@ -1,3 +1,7 @@
+import sys
+sys.path.insert(1, 'player')
+sys.path.insert(1, 'end_game')
+
 import time
 import pygame
 from keyboard_listener import key_listener
@@ -10,7 +14,8 @@ from movement import move
 pygame.init()
 
 # Setting app name.
-pygame.display.set_caption("Yoshi's snake game")
+score = 1
+pygame.display.set_caption("Yoshi's snake game." + " " * 3 + "score: " + str(score))
 
 # It should be 17x15. 
 SCREEN_WIDTH = 680
@@ -27,6 +32,8 @@ objects.append(yoshis)
 player = Yoshi()
 yoshis.append(player)
 
+# Letting player choose the first direction.
+direction = ""
 
 running = True
 while running:
@@ -44,18 +51,23 @@ while running:
     # Flip the display
     pygame.display.flip()
     
-    # Updating the stats for next rendering:
-        # Updating gif frames.
-    update_frames(one_dimensional_list(objects))
-        # Moving yoshis
+
     
 
     # Verifying if player lost:
     if collided_walls(player, SCREEN_WIDTH, SCREEN_HEIGHT):
         end_game(screen)
-        running = False
+
+        
         
     time.sleep(0.5)
+
+    # Updating the stats for next rendering:
+        
+        # Updating gif frames.
+    update_frames(one_dimensional_list(objects))
+        
+        # Moving player to chosen direction.
     direction = key_listener() or direction 
     move(player, direction, 40, 40)
 

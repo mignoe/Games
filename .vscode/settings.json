@@ -1,0 +1,6 @@
+{
+    "python.analysis.extraPaths": [
+        "./yoshi-snake-game/end_game",
+        "./yoshi-snake-game/player"
+    ]
+}
