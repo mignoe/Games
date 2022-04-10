@@ -37,10 +37,8 @@ direction = ""
 
 running = True
 while running:
-    # Did the user click the window close button?
-    for event in pygame.event.get():
-        if event.type == pygame.QUIT:
-            running = False
+    # Taking 
+    last_relevant_key = key_listener()
 
     # Fill the background with green
     screen.fill((31, 134, 31))
@@ -49,14 +47,12 @@ while running:
     render_all(one_dimensional_list(objects), screen)
 
     # Flip the display
-    pygame.display.flip()
-    
-
+    pygame.display.flip()    
     
 
     # Verifying if player lost:
     if collided_walls(player, SCREEN_WIDTH, SCREEN_HEIGHT):
-        end_game(screen)
+       end_game(screen)
 
         
         
@@ -73,4 +69,5 @@ while running:
 
     
 # Done! Time to quit.
+pygame.display.quit()
 pygame.quit()

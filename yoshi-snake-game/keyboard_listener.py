@@ -1,24 +1,32 @@
 import pygame
+import sys
+relevant_events = {
+    
+}
 
-def key_listener():
+def event_listener():
     for event in pygame.event.get():
-         
-        # checking if keydown event happened or not
+        # Event if the game should quit.
+        if event.type == pygame.QUIT:
+            return "quit"
+            
+
+        # Checking if keydown event happened or not
         if event.type == pygame.KEYDOWN:
 
-            # checking if key "A" was pressed
+            # Checking if key "Arrow_Up" was pressed
             if event.key == pygame.K_UP:
                 return "up"
                
-            # checking if key "J" was pressed
+            # Checking if key "Arrow_Right" was pressed
             if event.key == pygame.K_RIGHT:
                 return "right"
             
-            # checking if key "P" was pressed
+            # Checking if key "Arrow_Down" was pressed
             if event.key == pygame.K_DOWN:
                 return "down"
              
-            # checking if key "M" was pressed
+            # Checking if key "Arrow_Left" was pressed
             if event.key == pygame.K_LEFT:
                 return "left"
 
