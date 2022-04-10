@@ -4,12 +4,12 @@ sys.path.insert(1, 'end_game')
 
 import time
 import pygame
-from keyboard_listener import key_listener
+from event_listener import event_listener
 from yoshi import Yoshi, colors
 from functions import render_all, one_dimensional_list, update_frames
 from end_game import  end_game
 from collided import collided_walls
-from movement import move
+from movement import set_direction, move
 
 pygame.init()
 
@@ -37,9 +37,7 @@ direction = ""
 
 running = True
 while running:
-    # Taking 
-    last_relevant_key = key_listener()
-
+    
     # Fill the background with green
     screen.fill((31, 134, 31))
 
@@ -58,13 +56,18 @@ while running:
         
     time.sleep(0.5)
 
-    # Updating the stats for next rendering:
-        
+    # Preparing for the next rendering:
+        # Taking input.
+    last_relevant_event = event_listener()
+        # Closing game if clicked to quit:
+    if last_relevant_event == "quit":
+        sys.exit(0)
+
         # Updating gif frames.
     update_frames(one_dimensional_list(objects))
         
         # Moving player to chosen direction.
-    direction = key_listener() or direction 
+    direction = set_direction(direction, last_relevant_event)   
     move(player, direction, 40, 40)
 
     

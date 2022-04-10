@@ -16,6 +16,8 @@ def set_direction(actual_direction, relevant_event):
 
     if relevant_event == "left" and actual_direction != "right":
         return "left"
+    
+    return actual_direction
 
 
 def move(object, direction, multiplier_x, multiplier_y):
