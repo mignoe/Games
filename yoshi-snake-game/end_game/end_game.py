@@ -1,6 +1,5 @@
 import pygame
 
-# End game.
 
 def end_game(display):
     pygame.init()

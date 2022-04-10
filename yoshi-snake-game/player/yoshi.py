@@ -20,7 +20,7 @@ class Yoshi:
         self.frame += 1
         
         # Yoshis only have 7 frames.
-        if self.frame > 7:
+        if self.frame > self.frame_lim:
             self.frame = 0
         
         self.src = colors[self.color] + str(self.frame) + ".gif"

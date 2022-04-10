@@ -1,33 +1,26 @@
 import pygame
-import sys
+
 relevant_events = {
+    # For leaving the game.
+    pygame.QUIT: "quit",
     
+    # KeyDown important events.
+    pygame.K_UP: "up",
+    pygame.K_RIGHT: "right",
+    pygame.K_DOWN: "down",
+    pygame.K_LEFT: "left"
+
 }
+
 
 def event_listener():
     for event in pygame.event.get():
-        # Event if the game should quit.
-        if event.type == pygame.QUIT:
-            return "quit"
+        # Normal events type.
+        if event.type in relevant_events.keys():
+            return relevant_events[event.type]
+
+        # Keydown events type.
+        if event.type == pygame.KEYDOWN and event.key in relevant_events.keys():
+            return relevant_events[event.key]
             
-
-        # Checking if keydown event happened or not
-        if event.type == pygame.KEYDOWN:
-
-            # Checking if key "Arrow_Up" was pressed
-            if event.key == pygame.K_UP:
-                return "up"
-               
-            # Checking if key "Arrow_Right" was pressed
-            if event.key == pygame.K_RIGHT:
-                return "right"
-            
-            # Checking if key "Arrow_Down" was pressed
-            if event.key == pygame.K_DOWN:
-                return "down"
-             
-            # Checking if key "Arrow_Left" was pressed
-            if event.key == pygame.K_LEFT:
-                return "left"
-
 
