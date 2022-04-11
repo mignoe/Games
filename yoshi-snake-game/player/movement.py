@@ -31,10 +31,10 @@ def move(object, direction, multiplier_x, multiplier_y):
         object.x -= 1 * multiplier_x
 
 
-def move_all_snake(snake):
-    for i in range(len(snake) - 1):
-        snake[i].x = snake[i + 1].x
-        snake[i].y = snake[i + 1].y
+def move_all(snake):
+    for i in range(len(snake) - 1, 0, -1):
+        snake[i].x = snake[i - 1].x
+        snake[i].y = snake[i - 1].y
        
 
 

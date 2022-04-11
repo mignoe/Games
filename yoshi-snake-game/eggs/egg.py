@@ -24,3 +24,9 @@ class Egg:
         # eggs only have 3 frames.
         if self.frame > self.frame_lim:
             self.frame = 0
+        
+        self.src = colors[self.color] + str(self.frame) + ".png"
+    
+    def check_collision(self, player):
+        if player.x == self.x and player.y == self.y:
+            return True
