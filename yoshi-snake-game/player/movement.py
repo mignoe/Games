@@ -20,7 +20,7 @@ def set_direction(actual_direction, relevant_event):
     return actual_direction
 
 
-def move(object, direction, multiplier_x, multiplier_y):
+def move(object, direction: str, multiplier_x, multiplier_y):
     if direction == "up":
         object.y -= 1 * multiplier_y
     if direction == "right":

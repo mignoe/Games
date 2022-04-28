@@ -1,4 +1,8 @@
-import pygame, sys, time, random
+import sys
+import time
+import random
+
+import pygame 
 
 from event_listener import event_listener
 from functions import render_all, one_dimensional_list, update_frames
@@ -33,7 +37,7 @@ objects.append(yoshis)
 objects.append(eggs)
 
 # Creating player character.
-player = Yoshi(x = 120, y = 0)
+player = Yoshi()
 yoshis.append(player)
 
 
@@ -70,25 +74,29 @@ while True:
     if last_relevant_event == "quit":
         sys.exit(0)
 
-        # Checking egg collision.
     
     # Preparing for the next rendering:
+    
     move_all(yoshis)
 
-    
-        # Moving player to chosen direction.
     direction = set_direction(direction, last_relevant_event)   
     move(player, direction, 40, 40)
 
+        # Checking egg collision.
     if eggy.check_collision(player):
-        new_yoshi = Yoshi(x = player.x, y = player.y)
+        new_yoshi = Yoshi(x = player.x, y = player.y, current_frame = frame)
         yoshis.append(new_yoshi)
-        eggy.x = random.randint(0, 17) * 40
-        eggy.y = random.randint(0, 15) * 40
+        
+        # Changing egg location.
+        eggy.x = random.randint(0, 16) * 40
+        eggy.y = random.randint(0, 14) * 40
+
         score += 1
         pygame.display.set_caption("Yoshi's Snake Game." + " " * 3 + "Score: " + str(score))
 
         # Updating gif frames.
     update_frames(one_dimensional_list(objects))
+    
+    frame += 1    
 
 

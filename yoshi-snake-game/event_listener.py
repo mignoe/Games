@@ -13,7 +13,7 @@ relevant_events = {
 }
 
 
-def event_listener():
+def event_listener() -> str:
     for event in pygame.event.get():
         # Normal events type.
         if event.type in relevant_events.keys():
